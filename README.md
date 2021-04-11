@@ -11,8 +11,14 @@ Alen's implemenation is specifically for a [Kyria](https://splitkb.com/)
 keyboard and uses CAGS [home-row](https://precondition.github.io/home-row-mods)
 modifiers.
 
-I am currently using GACS.  Kmonad doesn't support chords directly, so I don't have any of Alan's chords in kmonad.  The layers are
-influenced by Alan's, the layers in the [Miryoku](https://github.com/manna-harbour/qmk_firmware/blob/miryoku/users/manna-harbour_miryoku/miryoku.org) layout and some of my own ideas.  A conventionally-shared keyboard also pretty-much eliminates thumb layer control.  The standalone numpad is currently disabled (use the layer one).  I am very unhappy with the current symbol layer, so expect that to change.
+I am currently using GACS.  Kmonad doesn't support chords directly, so I don't
+have any of Alan's chords in kmonad.  The layers are influenced by Alan's, the
+layers in the
+[Miryoku](https://github.com/manna-harbour/qmk_firmware/blob/miryoku/users/manna-harbour_miryoku/miryoku.org)
+layout and some of my own ideas.  A conventionally-shaped keyboard also
+pretty-much eliminates thumb layer control.  The standalone numpad is currently
+disabled (use the layer one).  I don't like the current symbol layer, so expect
+that to change.
 
 Implementations:
    * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys and no capslock.
