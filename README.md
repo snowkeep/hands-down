@@ -19,7 +19,7 @@ Implementations:
    * kmonad config for the same keyboard that also modifies symbols and numbers to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/)
 
 Coming soon:
-   * [Iris] keyboard files.
+   * [Iris](https://keeb.io/collections/iris-split-ergonomic-keyboard) keyboard files.
 
 Thoughts
    * I don't like the symbol layer - considering splitting enclosures and the rest of the symbols - it would work on the Iris, but not a conventional keyboard
