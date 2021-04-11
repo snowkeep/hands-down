@@ -1,0 +1,110 @@
+;; KMonad implementation of R. Alan Reiser's Hands Down layout with GACS home row modifiers
+;; for a 104 key ANSI Dvorak keyboard.
+
+
+(defcfg
+  ;; ** For Linux **
+  input  (device-file "/dev/input/by-id/usb-04d9_USB_Keyboard-event-kbd")
+  output (uinput-sink "KMonad output")
+
+  ;; ** For Windows **
+  ;; input  (low-level-hook)
+  ;; output (send-event-sink)
+
+  ;; ** For MacOS **
+  ;; input  (iokit-name "my-keyboard-product-string")
+  ;; output (kext)
+
+  fallthrough false
+)
+
+(defsrc
+  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12         ins  home  pgup
+  grv     1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
+  tab     '    ,    .    p    y    f    g    c    r    l    /    =    \
+  lctl    a    o    e    u    i    d    h    t    n    s    -    ret
+  lsft      ;    q    j    k    x    b    m    w    v    z   rsft                 up
+  lctl    lmet lalt           spc            ralt rmet cmp  rctl             lft down rght
+)
+ 
+(defalias
+  nav  (layer-toggle navi) ;;
+  num  (layer-toggle num) ;;
+  sym  (layer-toggle symbols) ;; Bind 'sym' to Symbols Layer
+  med  (layer-toggle media) ;;
+)
+
+(defalias
+  rm  (tap-hold 200 r lmet)
+  sa  (tap-hold 200 s lalt)
+  nc  (tap-hold 200 n lctl)
+  ts  (tap-hold 200 t lsft)
+  us  (tap-hold 200 u rsft)
+  ec  (tap-hold 200 e rctl)
+  ia  (tap-hold 200 i lalt)
+  am  (tap-hold 200 a rmet)
+  ba  (tap-hold 200 b C-ralt)
+  ,a  (tap-hold 200 , C-ralt)
+  Cesc (tap-hold 200 esc lctl)
+  cpy C-c
+  pst C-v
+  cut C-x
+  udo C-z
+  all C-a
+  fnd C-f
+  bk Back
+  fw Forward
+)
+
+(deflayer handsdown
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgu
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    del  end   pgdn
+  tab      q    c    h    m    z    v    k    o    j    ;    /    =    \
+  @Cesc   @rm  @sa  @nc  @ts   p    w   @us  @ec  @ia  @am   -    ret
+   _         x   @ba   l    d    g    y    f    '   @,a   .     _                    up
+  @med      _   @num           spc            @sym  @nav  _    _                lft down rght
+)
+
+(deflayer navi
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgu
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    del  end   pgdn
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
+  _        _   lft down  rght end   _    4    5    6    +    -    ret
+  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                     up
+   _        _    _             spc             _    _   _    _                  lft down rght
+)
+
+(deflayer num
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          ins  home  pgu
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
+  _        _   lft down  rght end   _    4    5    6    +    -    ret
+  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                    up
+   _        _    _             spc            _     _   _    _                 lft down rght
+)
+
+(deflayer symbols
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        S-1  S-2  S-3  S-4  S-5  «    _    _    _    _    _    _    _
+  _        \_   [    {    \(   S-6  »    _    _    _    _    _    _
+  _          ]    }    \)   S-7  `    _    _    _    _     _    _
+  _        _    _              _              _    _    _    _
+)
+
+(deflayer media
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _   volu  _    _    _    _
+  _        _    _    _     _   _    _    _  previoussong  vold nextsong  _    _
+  _          _    _    _    _    _    _   play stop mute   _    _
+  _        _    _              _              _    _    _    _
+)
+(deflayer empty
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _          _    _    _    _    _    _    _    _    _    _    _
+  _        _    _              _              _    _    _    _
+)
