@@ -35,9 +35,11 @@
   rm  (tap-hold 200 r lmet)
   sa  (tap-hold 200 s lalt)
   nc  (tap-hold 200 n lctl)
+  Nc  (tap-hold 200 N lctl)     ;; for SHIFT-CTRL
   ts  (tap-hold 200 t @sft)
   us  (tap-hold 200 u @sft)
   ec  (tap-hold 200 e rctl)
+  Ec  (tap-hold 200 E rctl)      ;; for SHIFT-CTRL
   ia  (tap-hold 200 i lalt)
   am  (tap-hold 200 a rmet)
   ba  (tap-hold 200 b C-ralt)
@@ -66,7 +68,7 @@
    _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
    ~       %    7    5    3    1    9    0    2    4    6    8    `    bspc    del  end   pgdn
   tab      Q    C    H    M    Z    V    K    O    J    :    ?    ^    |
-  @Cesc    R    S    N    T    P    W    U    E    I    A   \_    ret
+  @Cesc    R    S   @Nc   T    P    W    U   @Ec   I    A   \_    S-ret
    _         X    B    L    D    G    Y    F    "    <    >     _                    up
   @med      _   @num           spc            @sym  @nav  _    _                lft down rght
 )
