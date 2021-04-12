@@ -20,9 +20,13 @@ pretty-much eliminates thumb layer control.  The standalone numpad is currently
 disabled (use the layer one).  I don't like the current symbol layer, so expect
 that to change.
 
+There are reference and programmer implementations of each.
+The Programmer versions have symbols and numbers modified to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/).
+
+
 Implementations:
-   * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys and no capslock.
-   * kmonad config for the same keyboard that also modifies symbols and numbers to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/)
+   * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys, capslock and an ESC tap-mod on the home CTRL.
+   * Microsoft Keyboird Layout Creator (no tap mods)
 
 Coming soon:
    * [Iris](https://keeb.io/collections/iris-split-ergonomic-keyboard) keyboard files.
