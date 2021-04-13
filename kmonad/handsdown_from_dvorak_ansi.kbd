@@ -20,11 +20,11 @@
 
 (defsrc
   esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12         ins  home  pgup
-  grv     1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
-  tab     '    ,    .    p    y    f    g    c    r    l    /    =    \
-  lctl    a    o    e    u    i    d    h    t    n    s    -    ret
-  lsft      ;    q    j    k    x    b    m    w    v    z   rsft                 up
-  lctl    lmet lalt           spc            ralt rmet cmp  rctl             lft down rght
+  grv     1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn   nlck kp/ kp* kp-
+  tab     '    ,    .    p    y    f    g    c    r    l    /    =    \                         kp7 kp8 kp9
+  lctl    a    o    e    u    i    d    h    t    n    s    -    ret                            kp4 kp5 kp6 kp+
+  lsft      ;    q    j    k    x    b    m    w    v    z   rsft                 up            kp1 kp2 kp3
+  lctl    lmet lalt           spc            ralt rmet cmp  rctl             lft down rght      kp0     kp. kprt
 )
  
 (defalias
@@ -57,54 +57,54 @@
 )
 
 (deflayer handsdown
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
-  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    del  end   pgdn
-  tab      q    c    h    m    z    v    k    o    j    ;    /    =    \
-  @Cesc   @rm  @sa  @nc  @ts   p    w   @us  @ec  @ia  @am   -    ret
-   _         x   @ba   l    d    g    y    f    '   @,a   .     _                    up
-  @med      _   @num           spc            @sym  @nav  _    _                lft down rght
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    ins  home  pgup   nlck kp/ kp* kp-
+  tab      q    c    h    m    z    v    k    o    j    ;    /    =    \       del  end   pgdn    kp7 kp8 kp9
+  @Cesc   @rm  @sa  @nc  @ts   p    w   @us  @ec  @ia  @am   -    ret                             kp4 kp5 kp6 kp+
+   _         x   @ba   l    d    g    y    f    '   @,a   .     _                    up           kp1 kp2 kp3
+  @med      _   @num           spc            @sym  @nav  _    _                lft down rght     kp0     kp. kprt
 )
 
 (deflayer navi
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
-  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    del  end   pgdn
-  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
-  _        _   lft down  rght end   _    4    5    6    +    -    ret
-  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                     up
-   _        _    _             spc             _    _   _    _                  lft down rght
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    ins  home  pgup   nlck kp/ kp* kp-
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \       del  end   pgdn    kp7 kp8 kp9
+  _        _   lft down  rght end   _    4    5    6    +    -    ret                             kp4 kp5 kp6 kp+
+  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                     up           kp1 kp2 kp3
+   _        _    _             spc             _    _   _    _                  lft down rght     kp0     kp. kprt
 )
 
 (deflayer num
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          ins  home  pgup
-  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
-  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
-  _        _   lft down  rght end   _    4    5    6    +    -    ret
-  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                    up
-   _        _    _             spc            _     _   _    _                 lft down rght
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc   ins  home  pgup   nlck / * -
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \      del  end   pgdn      7 8 9
+  _        _   lft down  rght end   _    4    5    6    +    -    ret                              4 5 6 +
+  _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                    up             1 2 3
+   _        _    _             spc            _     _   _    _                 lft down rght       0   . ret
 )
 
 (deflayer symbols
-  _        _    _    _    _    _    _    _    _    _    _    _    _           ins  home  pgup
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _      del  end   pgdn
-  _        S-1  S-2  S-3  S-4  S-5  «    _    _    _    _    _    _    _
-  _        \_   [    {    \(   S-6  »    _    _    _    _    _    _
-  _          ]    }    \)   S-7  `    _    _    _    _     _    _                   up
-  _        _    _              _              _    _    _    _                 lft down rght
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _      ins  home  pgup   nlck kp/ kp* kp-
+  _        S-1  S-2  S-3  S-4  S-5  «    _    _    _    _    _    _    _      del  end   pgdn    kp7 kp8 kp9
+  _        \_   [    {    \(   S-6  »    _    _    _    _    _    _                              kp4 kp5 kp6 kp+
+  _          ]    }    \)   S-7  `    _    _    _    _     _    _                   up           kp1 kp2 kp3
+  _        _    _              _              _    _    _    _                 lft down rght     kp0     kp. kprt
 )
 
 (deflayer media
-  _        _    _    _    _    _    _    _    _    _    _    _    _               ins  home  pgup
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _          del  end   pgdn
-  _        _    _    _    _    _    _    _    _   volu  _    _    _    _
-  _        _    _    _     _   _    _    _  previoussong  vold nextsong  _    _
-  _          _    _    _    _    _    _   play stop mute   _    _                       up
-  _        _    _              _              _    _    _    _                     lft down rght
+  _        _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _          ins  home  pgup   nlck kp/ kp* kp-
+  _        _    _    _    _    _    _    _    _   volu  _    _    _    _          del  end   pgdn    kp7 kp8 kp9
+  _        _    _    _     _   _    _    _  previoussong  vold nextsong  _    _                      kp4 kp5 kp6 kp+
+  _          _    _    _    _    _    _   play stop mute   _    _                       up           kp1 kp2 kp3
+  _        _    _              _              _    _    _    _                     lft down rght     kp0     kp. kprt
 )
 (deflayer empty
-  _        _    _    _    _    _    _    _    _    _    _    _    _               ins  home  pgup
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _           del  end   pgdn
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _
   _        _    _    _    _    _    _    _    _    _    _    _    _
-  _          _    _    _    _    _    _    _    _    _    _    _                         up
-  _        _    _              _              _    _    _    _                      lft down rght
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _          ins  home  pgup    nlck kp/ kp* kp-
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _           del  end   pgdn     kp7 kp8 kp9
+  _        _    _    _    _    _    _    _    _    _    _    _    _                                   kp4 kp5 kp6 kp+
+  _          _    _    _    _    _    _    _    _    _    _    _                         up           kp1 kp2 kp3
+  _        _    _              _              _    _    _    _                      lft down rght     kp0     kp. kprt
 )
