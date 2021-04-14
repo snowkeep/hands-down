@@ -15,9 +15,9 @@
 )
 
 (defsrc
-  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12         ins  home  pgup
-  grv     1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
-  tab     '    ,    .    p    y    f    g    c    r    l    /    =    \
+  esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12         
+  grv     1    2    3    4    5    6    7    8    9    0    [    ]    bspc   ins  home  pgup
+  tab     '    ,    .    p    y    f    g    c    r    l    /    =    \      del  end   pgdn
   lctl    a    o    e    u    i    d    h    t    n    s    -    ret
   lsft      ;    q    j    k    x    b    m    w    v    z   rsft                 up
   lctl    lmet lalt           spc            ralt rmet cmp  rctl             lft down rght
@@ -56,62 +56,62 @@
 )
 
 (deflayer handsdown
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
-   $       &    [    {    }   \(    =    *   \)    +    ]    }    #    bspc    del  end   pgdn
-  tab      q    c    h    m    z    v    k    o    j    ;    /    @    \
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           
+   $       &    [    {    }   \(    =    *   \)    +    ]    }    #    bspc    ins  home  pgup
+  tab      q    c    h    m    z    v    k    o    j    ;    /    @    \       del  end   pgdn
   @Cesc   @rm  @sa  @nc  @ts   p    w   @us  @ec  @ia  @am   -    ret
    _         x   @ba   l    d    g    y    f    '   @,a   .     _                    up
   @med      _   @num           spc            @sym  @nav  _    _                lft down rght
 )
 
 (deflayer shift
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
-   ~       %    7    5    3    1    9    0    2    4    6    8    `    bspc    del  end   pgdn
-  tab      Q    C    H    M    Z    V    K    O    J    :    ?    ^    |
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           
+   ~       %    7    5    3    1    9    0    2    4    6    8    `    bspc    ins  home  pgup
+  tab      Q    C    H    M    Z    V    K    O    J    :    ?    ^    |       del  end   pgdn
   @Cesc    R    S   @Nc   T    P    W    U   @Ec   I    A   \_    S-ret
    _         X    B    L    D    G    Y    F    "    <    >     _                    up
-  @med      _   @num           spc            @sym  @nav  _    _                lft down rght
+  @med      _   @num           spc            @sym  @nav  _    _             S-lft S-down S-rght
 )
 
 (deflayer navi
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           ins  home  pgup
-  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    del  end   pgdn
-  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc    ins  home  pgup
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \       del  end   pgdn
   _        _   lft down  rght end   _    4    5    6    +    -    ret
   _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                     up
    _        _    _             spc             _    _   _    _                  lft down rght
 )
 
 (deflayer num
-   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          ins  home  pgup
-  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc   del  end   pgdn
-  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \
+   _      f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          
+  grv      1    2    3    4    5    6    7    8    9    0    [    ]    bspc   ins  home  pgup
+  _        _  pgup  up   pgdn home  _    7    8    9    *    /    =    \      del  end   pgdn
   _        _   lft down  rght end   _    4    5    6    +    -    ret
   _        @udo @cut @cpy @pst   _    0    1    2    3    .    =                    up
    _        _    _             spc            _     _   _    _                 lft down rght
 )
 
 (deflayer symbols
-  _        _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _            
   _        _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _
-  _        S-1  S-2  S-3  S-4  S-5  «    _    _    _    _    _    _    _
+  _        S-1  S-2  S-3  S-4  S-5  «    _    _    _    _    _    _    _       _    _    _
   _        \_   [    {    \(   S-6  »    _    _    _    _    _    _
   _          ]    }    \)   S-7  `    _    _    _    _     _    _                   _
   _        _    _              _              _    _    _    _                 _    _     _
 )
 
 (deflayer media
-  _        _    _    _    _    _    _    _    _    _    _    _    _               _  _  _
+  _        _    _    _    _    _    _    _    _    _    _    _    _               
   _        _    _    _    _    _    _    _    _    _    _    _    _    _          _  _  _
-  _        _    _    _    _    _    _    _    _   volu  _    _    _    _
+  _        _    _    _    _    _    _    _    _   volu  _    _    _    _          _  _  _
   _        _    _    _     _   _    _    _  previoussong  vold nextsong  _    _
   _          _    _    _    _    _    _   play stop mute   _    _                    _
   _        _    _              _              _    _    _    _                    _  _  _
 )
 (deflayer empty
-  _        _    _    _    _    _    _    _    _    _    _    _    _               _  _  _
+  _        _    _    _    _    _    _    _    _    _    _    _    _               
   _        _    _    _    _    _    _    _    _    _    _    _    _    _          _  _  _
-  _        _    _    _    _    _    _    _    _    _    _    _    _    _
+  _        _    _    _    _    _    _    _    _    _    _    _    _    _          _  _  _
   _        _    _    _    _    _    _    _    _    _    _    _    _
   _          _    _    _    _    _    _    _    _    _    _    _                     _
   _        _    _              _              _    _    _    _                    _  _  _
