@@ -1,6 +1,6 @@
 # Hands Down keymap for Iris
 
-Tested on Rev 4
+Tested on Iris Rev 4
 
 Requires Key Overrides (PR 11422 "`gh pr checkout 11422`")
 
@@ -11,7 +11,7 @@ Requires Key Overrides (PR 11422 "`gh pr checkout 11422`")
   * Qwerty layout (layer 2)
   * home-row mods (GACS) for Hands Down and Dvorak
   * ESC at far left of home row for Hands Down and Dvorak
-  * XB, BL, LD, DG combos for Undo, Cut, Copy, Paste
+  * XM, ML, LD, DB combos for Undo, Cut, Copy, Paste
   * ; and : swapped
 
 ## Layers

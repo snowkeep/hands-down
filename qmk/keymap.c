@@ -22,7 +22,7 @@ enum custom_keycodes {
 #define ALT_S LALT_T(KC_S)
 #define CTR_N LCTL_T(KC_N)
 #define SHF_T LSFT_T(KC_T)
-#define AGR_B RALT_T(KC_B)
+#define AGR_M RALT_T(KC_M)
 #define SFT_U RSFT_T(KC_U)
 #define CTR_E RCTL_T(KC_E)
 #define ALT_I LALT_T(KC_I)
@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TAB,  KC_Q,    KC_C,    KC_H,    KC_M,    KC_Z,                               KC_V,    KC_K,    KC_O,    KC_J,    KC_SCLN, KC_SLSH,
+     KC_TAB,  KC_Q,    KC_C,    KC_H,    KC_P,    KC_V,                               KC_K,    KC_Y,    KC_O,    KC_J,    KC_QUOT, KC_SLSH,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC,  GUI_R,   ALT_S,   CTR_N,   SHF_T,   KC_P,                               KC_W,    SFT_U,   CTR_E,   ALT_I,   GUI_A,   KC_MINS,
+     KC_ESC,  GUI_R,   ALT_S,   CTR_N,   SHF_T,   KC_G,                               KC_W,    SFT_U,   CTR_E,   ALT_I,   GUI_A,   KC_MINS,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LBRC, KC_X,    AGR_B,   KC_L,    KC_D,    KC_G,    KC_HOME,          KC_END,  KC_Y,    KC_F,    KC_COMM, AGR_D,   KC_QUOT, KC_RBRC,
+     KC_LBRC, KC_X,    AGR_M,   KC_L,    KC_D,    KC_B,    KC_HOME,          KC_END,  KC_Z,    KC_F,    KC_COMM, AGR_D,   KC_SCLN, KC_RBRC,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_DEL,  NAV,     KC_SPC,                    KC_ENT,  FUNC,    KC_BSPC
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -175,24 +175,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 enum combo_events {
   HD_QWERTY,
-  XB_UNDO,
-  BL_CUT,
+  XM_UNDO,
+  ML_CUT,
   LD_COPY,
-  DG_PASTE
+  DB_PASTE
 };
 
 const uint16_t PROGMEM qwerty_combo[] = {KC_GRV, KC_BSLS, COMBO_END};
-const uint16_t PROGMEM undo_combo[] = {KC_X, KC_B, COMBO_END};
-const uint16_t PROGMEM cut_combo[] = {KC_B, KC_L, COMBO_END};
+const uint16_t PROGMEM undo_combo[] = {KC_X, KC_M, COMBO_END};
+const uint16_t PROGMEM cut_combo[] = {KC_M, KC_L, COMBO_END};
 const uint16_t PROGMEM copy_combo[] = {KC_L, KC_D, COMBO_END};
-const uint16_t PROGMEM paste_combo[] = {KC_D, KC_G, COMBO_END};
+const uint16_t PROGMEM paste_combo[] = {KC_D, KC_B, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [HD_QWERTY] = COMBO_ACTION(qwerty_combo),
-  [XB_UNDO] = COMBO_ACTION(undo_combo),
-  [BL_CUT] = COMBO_ACTION(cut_combo),
+  [XM_UNDO] = COMBO_ACTION(undo_combo),
+  [ML_CUT] = COMBO_ACTION(cut_combo),
   [LD_COPY] = COMBO_ACTION(copy_combo),
-  [DG_PASTE] = COMBO_ACTION(paste_combo)
+  [DB_PASTE] = COMBO_ACTION(paste_combo)
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -202,12 +202,12 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         set_single_persistent_default_layer(_QWERTY);
       }
       break;
-    case XB_UNDO:
+    case XM_UNDO:
       if (pressed) {
         tap_code16(LCTL(KC_Z));
       }
       break;
-    case BL_CUT:
+    case ML_CUT:
       if (pressed) {
         tap_code16(LCTL(KC_X));
       }
@@ -217,7 +217,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         tap_code16(LCTL(KC_C));
       }
       break;
-    case DG_PASTE:
+    case DB_PASTE:
       if (pressed) {
         tap_code16(LCTL(KC_V));
       }

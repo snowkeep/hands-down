@@ -17,16 +17,17 @@ layers in the
 [Miryoku](https://github.com/manna-harbour/qmk_firmware/blob/miryoku/users/manna-harbour_miryoku/miryoku.org)
 layout and some of my own ideas.  A conventionally-shaped keyboard also
 pretty-much eliminates thumb layer control.  The standalone numpad is currently
-disabled (use the layer one).  I don't like the current symbol layer, so expect
-that to change.
+disabled (use the layer one).
 
-There are reference, pg and py implementations of each.
+
+There are reference, pg and py implementations for kmonad and MKLC. 
 The pg versions have symbols and numbers modified to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/).  The py versions are more like the Workman-P numbers/symbols (regular placement but shift-swapped), however [/{ and ]/} haven't been swapped and :/; have.  That makes it better for Python.
-
+I haven't adopted Alan's number ordering yet - I use a tiling window manager and the cognitive overhead of a new layout and getting to my workspaces is too much, right now.
 
 Implementations:
-   * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys, capslock and an ESC tap-mod on the home CTRL.
-   * Microsoft Keyboird Layout Creator (no tap mods)
+   * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys, capslock and an ESC tap-mod on the home CTRL. (previous version of HD ~2021-04-10)
+   * Microsoft Keyboard Layout Creator (no tap mods) (previous version of HD ~ 2021-04-10)
+   * Iris QMK source (up to date as of 2021-04-17)
 
 Coming soon:
    * [Iris](https://keeb.io/collections/iris-split-ergonomic-keyboard) keyboard files.
