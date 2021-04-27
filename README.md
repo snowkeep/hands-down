@@ -21,23 +21,11 @@ disabled (use the layer one).
 
 
 There are reference, pg and py implementations for kmonad and MKLC. 
-The pg versions have symbols and numbers modified to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/).  The py versions are more like the Workman-P numbers/symbols (regular placement but shift-swapped), however [/{ and ]/} haven't been swapped and :/; have.  That makes it better for Python.
-I haven't adopted Alan's number ordering yet - I use a tiling window manager and the cognitive overhead of a new layout and getting to my workspaces is too much, right now.
+The kmonad pg version has symbols and numbers modified to match [Programmer's Dvorak](https://www.kaufmann.no/roland/dvorak/).  The py version is more like the Workman-P numbers/symbols (regular placement but shift-swapped), however [/{ and ]/} haven't been swapped and :/; have.  That makes it better for Python.
+I'm not following Alan's layers in my QMK source, but I'd call it a work-in-progress, so they may converge.  I like what he now has up on his website a lot more than what was in the original QMK source he had linked when I first started with Hands Down.
 
 Implementations:
    * kmonad config for a 104-key ANSI Dvorak keyboard with 3 CTRL keys, capslock and an ESC tap-mod on the home CTRL. (previous version of HD ~2021-04-10)
-   * Microsoft Keyboard Layout Creator (no tap mods) (previous version of HD ~ 2021-04-10)
-   * Iris QMK source (up to date as of 2021-04-17)
+   * Microsoft Keyboard Layout Creator (no tap mods) (HD # ordering, :/; swap)
+   * Iris QMK source (123... # ordering, :/; swap)
 
-Coming soon:
-   * [Iris](https://keeb.io/collections/iris-split-ergonomic-keyboard) keyboard files.
-
-Thoughts
-   * I don't like the symbol layer - considering splitting enclosures and the rest of the symbols - it would work on the Iris, but not a conventional keyboard
-   * Miryoku's symbol layer is the shift-numbers (conventional mapping) with [] added on the number level - it's a pretty good idea
-   * Alan split out enclosures, but the rest of the symbols seem pretty random - I don't see a logical pattern.
-   * should the numpad be completely reworked?  There's some ideas [here](https://geekhack.org/index.php?topic=72149.0), but they admit the studies were all from dialing phone numbers.  Should hex symbols be added?  Pure entry, w/ $ and %, or stay with basic calculator layout?
-   * Should ! and ? be on the same key?
-
-Concerns
-   * Programmer Dvorak number ordering is a PITA for desktop switching on tiling window managers.
